@@ -1,0 +1,18 @@
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/recommended-requiring-type-checking
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  tsconfigRootDir: './'
+  project:
+    - './app/tsconfig.json'
+    - './api/tsconfig.json'
+
+  extraFileExtensions: ['.txt']
+  ecmaVersion: 6
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
